@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.15)
+project(PackageTest CXX)
+
+find_package(mypkg CONFIG REQUIRED)
+
+message("${MOD3_VARIABLE}")
+message("${MOD2_VARIABLE}")
+
+add_executable(example src/example.cpp)
+target_link_libraries(example mypkg::mypkg)
